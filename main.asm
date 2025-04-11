@@ -2,14 +2,31 @@
 rand8reg  EQU 30h    ; rand8reg é mapeado para o endereço 30h de memória
 
 rand8:
-    mov a, rand8reg    ; Move o valor de rand8reg para o acumulador (A)
-    jnz rand8b         ; Se A não for zero, vai para rand8b
-    cpl a              ; Complementa os bits do acumulador
-    mov rand8reg, a    ; Armazena o valor de A em rand8reg
+    mov a, rand8reg
+    jnz rand8b
+    cpl a
+    mov rand8reg, a
+
 rand8b:
-    anl a, #0xB8       ; Realiza a operação AND com 10111000b (0xB8)
-    mov c, p           ; Move o valor do bit de carry para o bit C
-    mov a, rand8reg    ; Move rand8reg para A
-    rlc a              ; Rotaciona os bits de A para a esquerda com carry
-    mov rand8reg, a    ; Armazena o novo valor de A em rand8reg
-    ret                ; Retorna da função
+    anl a, #0xB8
+    mov c, p
+    mov a, rand8reg
+    rlc a
+    mov rand8reg, a
+
+; A essa altura, o valor está em A. Agora limitamos até 56.
+; Vamos fazer: enquanto A >= 15, repetir o algoritmo.
+
+rand8_limit:
+    mov a, rand8reg
+    cjne a, #15, check_less
+    sjmp rand8             ; Repetir se for igual a 15
+check_less:
+    jc rand8_done          ; JC é "jump if carry", ou seja, A < 15
+    sjmp rand8             ; Se não for menor, repetir o algoritmo
+
+rand8_done:
+    ; Aqui o valor em A estará de 0 a 14
+    ret
+
+
