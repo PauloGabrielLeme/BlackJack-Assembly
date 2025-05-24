@@ -17,7 +17,7 @@ carta3_3 equ 32h
 carta4_3 equ 42h
 
 ; --- Flag de tecla pressionada ---
-flag_tecla EQU 20h    ; ✅
+flag_tecla EQU 20h   
 
 org 0000h
     LJMP START
@@ -129,7 +129,7 @@ gen_carta3_1:
     MOV C, P
     MOV A, carta3_1
     RLC A
-    ANL A, #0x07
+    ANL A, #0x0F
     MOV carta3_1, A
     ACALL stop_timer
     RET
@@ -141,7 +141,7 @@ gerar_carta4_1:
     CPL A
     MOV carta4_1, A
 gen_carta4_1:
-    ANL A, #0x0E
+    ANL A, #0x06
     MOV C, P
     MOV A, carta4_1
     RLC A
@@ -185,7 +185,7 @@ gerar_carta3_2:
     CPL A
     MOV carta3_2, A
 gen_carta3_2:
-    ANL A, #0x07
+    ANL A, #0x0F
     MOV C, P
     MOV A, carta3_2
     RLC A
@@ -201,7 +201,7 @@ gerar_carta4_2:
     CPL A
     MOV carta4_2, A
 gen_carta4_2:
-    ANL A, #0x0F
+    ANL A, #0x0A
     MOV C, P
     MOV A, carta4_2
     RLC A
