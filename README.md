@@ -40,6 +40,6 @@ Carta 4 = 42H
 
 # Exemplo
 
-![Setup Incial](Setup.jpg)
+![Setup Incial](Setup.png)
 
-![Resultados](Resultados.jpg)
+![Resultados](Resultados.png)
