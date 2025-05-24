@@ -40,8 +40,8 @@ Carta 4 = 42H;
 
 # Exemplo
 
-##Setup Incial:
+## Setup Incial:
 ![Setup Incial](Setup.png)
 
-##Resultados da Gerção de Números com todas as cartas compradas:
+## Resultados da Gerção de Números com todas as cartas compradas:
 ![Resultados](Resultados.png)
