@@ -1,4 +1,4 @@
-### BlackJack
+# BlackJack
 
 ## Descrição Geral
 
@@ -21,25 +21,27 @@ Se os jogadorees quiserem iniciar uma nova partida o jogo deve ser reiniciado.
 Os valores das cartas podem ser observados na memória,e estão organizadas da seguinte forma:
 
 Jogador 1:   
-Carta 1 = 10H
-Carta 2 = 20H
-Carta 3 = 30H
-Carta 4 = 40H
+Carta 1 = 10H;
+Carta 2 = 20H;
+Carta 3 = 30H;
+Carta 4 = 40H;
 
 Jogador 2:   
-Carta 1 = 11H
-Carta 2 = 21H
-Carta 3 = 31H
-Carta 4 = 41H
+Carta 1 = 11H;
+Carta 2 = 21H;
+Carta 3 = 31H;
+Carta 4 = 41H;
 
 Jogador 3:   
-Carta 1 = 12H
-Carta 2 = 22H
-Carta 3 = 32H
-Carta 4 = 42H
+Carta 1 = 12H;
+Carta 2 = 22H;
+Carta 3 = 32H;
+Carta 4 = 42H;
 
 # Exemplo
 
+##Setup Incial:
 ![Setup Incial](Setup.png)
 
+##Resultados da Gerção de Números com todas as cartas compradas:
 ![Resultados](Resultados.png)
